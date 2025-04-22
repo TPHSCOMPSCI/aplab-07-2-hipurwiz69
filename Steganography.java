@@ -71,8 +71,8 @@ public class Steganography {
                 if (sourceR < sourcePixels.length && sourceC < sourcePixels[0].length) {
                     Color secretColor = secretPixels[r][c].getColor();
                     int rNew = (sourcePixels[sourceR][sourceC].getRed() & 0b11111100) | (secretColor.getRed() >> 6);
-                    int gNew = (sourcePixels[sourceR][sourceC].getRed() & 0b11111100) | (secretColor.getRed() >> 6);
-                    int bNew = (sourcePixels[sourceR][sourceC].getRed() & 0b11111100) | (secretColor.getRed() >> 6);
+                    int gNew = (sourcePixels[sourceR][sourceC].getGreen() & 0b11111100) | (secretColor.getGreen() >> 6);
+                    int bNew = (sourcePixels[sourceR][sourceC].getBlue() & 0b11111100) | (secretColor.getBlue() >> 6);
 
                     sourcePixels[sourceR][sourceC].setColor(new Color(rNew, gNew, bNew));
                 }

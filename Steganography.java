@@ -288,8 +288,5 @@ public class Steganography {
         hideText(beach1, "HELLO WORLD");
         String revealed = revealText(beach1);
         System.out.println("Hidden message: " + revealed);
-
-        // ----------------------- ACTIVITY 4 ----------------------- 
-        
     }
 }
